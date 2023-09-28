@@ -4,13 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>Archives | Hexo</title>
+  <title>更换Gentoo_Linux_内核 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/index.html">
+  <meta name="description" content="看了群友的CachyOs内核，说是能够提升机器的性能，于是手痒自己装了一个. 1.仓库 https:&#x2F;&#x2F;github.com&#x2F;Szowisz&#x2F;CachyOS-kernels 按照README.md 文件 添加repository，更新CachyOS-kernels 2.知乎(当然，也可以直接看手册) https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;350073748 配置并编译你的内核">
+<meta property="og:type" content="article">
+<meta property="og:title" content="更换Gentoo_Linux_内核">
+<meta property="og:url" content="http://example.com/2023/09/29/%E6%9B%B4%E6%8D%A2Gentoo-Linux-%E5%86%85%E6%A0%B8/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="看了群友的CachyOs内核，说是能够提升机器的性能，于是手痒自己装了一个. 1.仓库 https:&#x2F;&#x2F;github.com&#x2F;Szowisz&#x2F;CachyOS-kernels 按照README.md 文件 添加repository，更新CachyOS-kernels 2.知乎(当然，也可以直接看手册) https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;350073748 配置并编译你的内核">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-09-28T19:02:07.000Z">
+<meta property="article:modified_time" content="2023-09-28T19:14:25.829Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -71,134 +75,67 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/09/29/%E6%9B%B4%E6%8D%A2Gentoo-Linux-%E5%86%85%E6%A0%B8/" class="archive-article-date">
-  <time class="dt-published" datetime="2023-09-28T19:02:07.000Z" itemprop="datePublished">Sep 29</time>
+        <section id="main"><article id="post-更换Gentoo-Linux-内核" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/09/29/%E6%9B%B4%E6%8D%A2Gentoo-Linux-%E5%86%85%E6%A0%B8/" class="article-date">
+  <time class="dt-published" datetime="2023-09-28T19:02:07.000Z" itemprop="datePublished">2023-09-29</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/09/29/%E6%9B%B4%E6%8D%A2Gentoo-Linux-%E5%86%85%E6%A0%B8/">更换Gentoo_Linux_内核</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      更换Gentoo_Linux_内核
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/09/14/%E5%A6%82%E4%BD%95%E5%85%A5%E9%97%A8/" class="archive-article-date">
-  <time class="dt-published" datetime="2023-09-14T06:03:56.000Z" itemprop="datePublished">Sep 14</time>
-</a>
+    <div class="e-content article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/09/14/%E5%A6%82%E4%BD%95%E5%85%A5%E9%97%A8/">如何入门?</a>
-    </h1>
-  
+        <p>看了群友的CachyOs内核，说是能够提升机器的性能，于是手痒自己装了一个.</p>
+<p>1.仓库</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/Szowisz/CachyOS-kernels">https://github.com/Szowisz/CachyOS-kernels</a></p>
+<p>按照README.md 文件 添加repository，更新CachyOS-kernels</p>
+<p>2.知乎(当然，也可以直接看手册)</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/350073748">https://zhuanlan.zhihu.com/p/350073748</a></p>
+<p>配置并编译你的内核</p>
+<p>3.启动报错</p>
+<p>end kernel panic - not syncing vfs unable to mount root fs on unkonw-block(0,0)</p>
+<p>出现这种错误的时候</p>
+<p>one -&gt;   下载dracut程序</p>
+<p>two -&gt;    dracut –kver&#x3D;&#x2F;var&#x2F;lib&#x2F;(version)-kernel    # 执行命令，这里的version是对应内核的版本号</p>
+<p>three -&gt; grub-mkconfig &#x2F;boot&#x2F;grub&#x2F;grub.cfg         # 重新生成grub.cfg文件</p>
+<p>4.重启，进入Advanced options for gentoo gnu&#x2F;linux</p>
+<p>查看是否能正常进入新内核系统</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/09/12/Binary-Exploitation/" class="archive-article-date">
-  <time class="dt-published" datetime="2023-09-12T07:16:52.000Z" itemprop="datePublished">Sep 12</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/09/12/Binary-Exploitation/">Binary_Exploitation</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/09/12/Linux%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" class="archive-article-date">
-  <time class="dt-published" datetime="2023-09-12T07:01:52.000Z" itemprop="datePublished">Sep 12</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/09/29/%E6%9B%B4%E6%8D%A2Gentoo-Linux-%E5%86%85%E6%A0%B8/" data-id="cln3k0zpl00003kv27dt9c3ve" data-title="更换Gentoo_Linux_内核" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/09/12/Linux%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">Linux安装教程</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/09/12/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E8%B7%AF-%E7%BE%8E%E5%89%A7%E5%AD%A6%E4%B9%A0%E6%B3%95/" class="archive-article-date">
-  <time class="dt-published" datetime="2023-09-12T00:33:35.000Z" itemprop="datePublished">Sep 12</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/09/12/%E8%8B%B1%E8%AF%AD%E5%AD%A6%E4%B9%A0%E8%B7%AF-%E7%BE%8E%E5%89%A7%E5%AD%A6%E4%B9%A0%E6%B3%95/">英语学习路+美剧学习法</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/08/28/hello-world/" class="archive-article-date">
-  <time class="dt-published" datetime="2023-08-28T02:27:28.195Z" itemprop="datePublished">Aug 28</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/08/28/hello-world/">Hello World</a>
-    </h1>
-  
-
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2023/09/14/%E5%A6%82%E4%BD%95%E5%85%A5%E9%97%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">如何入门?</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 
 </section>
