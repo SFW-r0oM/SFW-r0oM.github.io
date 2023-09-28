@@ -95,21 +95,18 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>看了群友的CachyOs内核，说是能够提升机器的性能，于是手痒自己装了一个.</p>
-<p>1.仓库</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/Szowisz/CachyOS-kernels">https://github.com/Szowisz/CachyOS-kernels</a></p>
+        <h4 id="内核安装"><a href="#内核安装" class="headerlink" title="内核安装"></a>内核安装</h4><p>看了群友的CachyOs内核，说是能够提升机器的性能，于是手痒自己装了一个.</p>
+<h5 id="1-仓库"><a href="#1-仓库" class="headerlink" title="1.仓库"></a>1.仓库</h5><p><a target="_blank" rel="noopener" href="https://github.com/Szowisz/CachyOS-kernels">https://github.com/Szowisz/CachyOS-kernels</a></p>
 <p>按照README.md 文件 添加repository，更新CachyOS-kernels</p>
-<p>2.知乎(当然，也可以直接看手册)</p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/350073748">https://zhuanlan.zhihu.com/p/350073748</a></p>
+<h5 id="2-知乎-当然，也可以直接看手册"><a href="#2-知乎-当然，也可以直接看手册" class="headerlink" title="2.知乎(当然，也可以直接看手册)"></a>2.知乎(当然，也可以直接看手册)</h5><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/350073748">https://zhuanlan.zhihu.com/p/350073748</a></p>
+<p><a target="_blank" rel="noopener" href="https://wiki.gentoo.org/wiki/Kernel/Upgrade/zh-cn">https://wiki.gentoo.org/wiki/Kernel/Upgrade/zh-cn</a> #手册</p>
 <p>配置并编译你的内核</p>
-<p>3.启动报错</p>
-<p>end kernel panic - not syncing vfs unable to mount root fs on unkonw-block(0,0)</p>
+<h5 id="3-启动报错"><a href="#3-启动报错" class="headerlink" title="3.启动报错"></a>3.启动报错</h5><p>end kernel panic - not syncing vfs unable to mount root fs on unkonw-block(0,0)</p>
 <p>出现这种错误的时候</p>
 <p>one -&gt;   下载dracut程序</p>
-<p>two -&gt;    dracut –kver&#x3D;&#x2F;var&#x2F;lib&#x2F;(version)-kernel    # 执行命令，这里的version是对应内核的版本号</p>
+<p>two -&gt;    dracut –kver&#x3D;(version)-kernel    # 执行命令，这里的version是对应内核的版本号,要是不知道该怎么写的话，进入&#x2F;var&#x2F;lib&#x2F;*   里面查看</p>
 <p>three -&gt; grub-mkconfig &#x2F;boot&#x2F;grub&#x2F;grub.cfg         # 重新生成grub.cfg文件</p>
-<p>4.重启，进入Advanced options for gentoo gnu&#x2F;linux</p>
-<p>查看是否能正常进入新内核系统</p>
+<h5 id="4-重启，进入Advanced-options-for-gentoo-gnu-linux"><a href="#4-重启，进入Advanced-options-for-gentoo-gnu-linux" class="headerlink" title="4.重启，进入Advanced options for gentoo gnu&#x2F;linux"></a>4.重启，进入Advanced options for gentoo gnu&#x2F;linux</h5><p>查看是否能正常进入新内核系统</p>
 
       
     </div>
