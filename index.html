@@ -104,7 +104,8 @@
 <h5 id="3-启动报错"><a href="#3-启动报错" class="headerlink" title="3.启动报错"></a>3.启动报错</h5><p>end kernel panic - not syncing vfs unable to mount root fs on unkonw-block(0,0)</p>
 <p>出现这种错误的时候</p>
 <p>one -&gt;   下载dracut程序</p>
-<p>two -&gt;    dracut –kver&#x3D;(version)-kernel    # 执行命令，这里的version是对应内核的版本号,要是不知道该怎么写的话，进入&#x2F;var&#x2F;lib&#x2F;*   里面查看</p>
+<p>two -&gt;    dracut –kver&#x3D;(version)-kernel-(dist)    # 执行命令，这里的version是对应内核的版本号,要是不知道该怎么写的话，进入&#x2F;lib&#x2F;modules&#x2F;*   里面查看, &#x2F;lib&#x2F;modules&#x2F;* 文件里面新内核名称是什么样就写成什么样,</p>
+<p>可能需要加dist,具体根据&#x2F;lib&#x2F;modules&#x2F;里面的文件名情况而定</p>
 <p>three -&gt; grub-mkconfig &#x2F;boot&#x2F;grub&#x2F;grub.cfg         # 重新生成grub.cfg文件</p>
 <h5 id="4-重启，进入Advanced-options-for-gentoo-gnu-linux"><a href="#4-重启，进入Advanced-options-for-gentoo-gnu-linux" class="headerlink" title="4.重启，进入Advanced options for gentoo gnu&#x2F;linux"></a>4.重启，进入Advanced options for gentoo gnu&#x2F;linux</h5><p>查看是否能正常进入新内核系统</p>
 
